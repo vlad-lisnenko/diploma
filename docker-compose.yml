@@ -93,8 +93,8 @@ services:
    - REDIS_CACHE_TIMEOUT=3600
   ports:
    - "1111:1111"
-  depends_on:
-   - user-service
+#   depends_on:
+#    - user-service
 
  client:
   build:
