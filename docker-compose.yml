@@ -29,7 +29,8 @@ services:
   container_name: service-registry
   ports:
    - "8761:8761"
-
+ depend_on:
+  - mongo
 
  api-gateway:
   build:
@@ -41,7 +42,8 @@ services:
    - REDIS_CACHE_TIMEOUT=3600
   ports:
    - "8080:8080"
-
+  depend_on:
+   - mongo
 
 #  email-sender:
 #   build:
@@ -95,8 +97,8 @@ services:
    - REDIS_CACHE_TIMEOUT=3600
   ports:
    - "1111:1111"
-#   depends_on:
-#    - user-service
+  depend_on:
+   - mongo
 
  client:
   build:
