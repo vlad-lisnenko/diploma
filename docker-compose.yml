@@ -29,8 +29,8 @@ services:
   container_name: service-registry
   ports:
    - "8761:8761"
- depends_on:
-  - mongo
+  depends_on:
+   - mongo
 
  api-gateway:
   build:
