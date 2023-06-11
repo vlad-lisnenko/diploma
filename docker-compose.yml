@@ -11,7 +11,7 @@ services:
   volumes:
    - mongo-data:/data/db
    - ./edsdump-mongo-5.0.3.gs :/mongo
-   command: mongorestore  --archive=edsdump-mongo-5.0.3.gs
+  command: mongorestore  --archive=edsdump-mongo-5.0.3.gs
 
 #  rabbit:
 #   image: rabbitmq
