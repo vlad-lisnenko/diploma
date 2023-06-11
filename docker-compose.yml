@@ -10,7 +10,7 @@ services:
       - REDIS_CACHE_TIMEOUT=3600
   volumes:
    - mongo-data:/data/db
-  command: ./restore-script.sh
+  command: restore-script.sh
   
 #  rabbit:
 #   image: rabbitmq
