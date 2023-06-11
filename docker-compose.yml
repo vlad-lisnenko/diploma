@@ -10,10 +10,9 @@ services:
       - REDIS_CACHE_TIMEOUT=3600
   volumes:
    - mongo-data:/data/db
-  restore:
-    volumes:
-      - ./edsdump-mongo-5.0.3.gz
-    command: mongorestore --archive edsdump-mongo-5.0.3.gz
+   - ./edsdump-mongo-5.0.3.gs :/mongo
+   command: mongorestore  --archive=edsdump-mongo-5.0.3.gs
+
 #  rabbit:
 #   image: rabbitmq
 #   container_name: rabbit
